@@ -1,0 +1,36 @@
+{
+    "events": [
+        {
+            "id": "deploy_001",
+            "type": "deployment",
+            "description": "Simulated bad deploy causing error burst",
+            "profile": "error_burst",
+            "rps": 20,
+            "duration_seconds": 120
+        },
+        {
+            "id": "deploy_002",
+            "type": "dependency_degradation",
+            "description": "Simulated slow database causing latency spike",
+            "profile": "latency_spike",
+            "rps": 15,
+            "duration_seconds": 180
+        },
+        {
+            "id": "deploy_003",
+            "type": "new_bug",
+            "description": "New code path triggering novel errors",
+            "profile": "new_signature",
+            "rps": 10,
+            "duration_seconds": 60
+        },
+        {
+            "id": "baseline",
+            "type": "normal_traffic",
+            "description": "Baseline normal traffic for comparison",
+            "profile": "normal",
+            "rps": 50,
+            "duration_seconds": 300
+        }
+    ]
+}

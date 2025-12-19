@@ -1,0 +1,59 @@
+{
+    "profiles": {
+        "normal": {
+            "description": "Normal production traffic with ~5% error rate",
+            "error_rate": 0.05,
+            "latency_range_ms": [
+                10,
+                500
+            ]
+        },
+        "error_burst": {
+            "description": "Simulates a service failure with ~70% error rate",
+            "error_rate": 0.70,
+            "latency_range_ms": [
+                1000,
+                10000
+            ],
+            "typical_duration_seconds": 120,
+            "use_case": "Test anomaly detection for error spikes"
+        },
+        "latency_spike": {
+            "description": "Simulates slow downstream dependency",
+            "error_rate": 0.05,
+            "latency_range_ms": [
+                2000,
+                15000
+            ],
+            "typical_duration_seconds": 300,
+            "use_case": "Test p95 latency regression detection"
+        },
+        "new_signature": {
+            "description": "Introduces novel error messages not seen before",
+            "error_rate": 0.30,
+            "latency_range_ms": [
+                100,
+                2000
+            ],
+            "typical_duration_seconds": 60,
+            "use_case": "Test novel error signature detection"
+        }
+    },
+    "services": [
+        "api-gateway",
+        "user-service",
+        "order-service",
+        "payment-service",
+        "inventory-service"
+    ],
+    "error_codes": [
+        400,
+        401,
+        403,
+        429,
+        500,
+        502,
+        503,
+        504
+    ]
+}
