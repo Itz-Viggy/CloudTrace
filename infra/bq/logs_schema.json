@@ -1,0 +1,68 @@
+[
+  {
+    "name": "ts",
+    "type": "TIMESTAMP",
+    "mode": "REQUIRED",
+    "description": "The timestamp of the log event"
+  },
+  {
+    "name": "service",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "The name of the service that generated the log"
+  },
+  {
+    "name": "severity",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Log level (INFO, WARN, ERROR, etc.)"
+  },
+  {
+    "name": "status_code",
+    "type": "INTEGER",
+    "mode": "NULLABLE",
+    "description": "HTTP status code (if applicable)"
+  },
+  {
+    "name": "latency_ms",
+    "type": "INTEGER",
+    "mode": "NULLABLE",
+    "description": "Request latency in milliseconds"
+  },
+  {
+    "name": "error_signature",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Normalized hash of the error message for clustering"
+  },
+  {
+    "name": "message",
+    "type": "STRING",
+    "mode": "REQUIRED",
+    "description": "The raw log message"
+  },
+  {
+    "name": "trace_id",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "Trace ID for distributed tracing"
+  },
+  {
+    "name": "request_path",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The HTTP path or operation"
+  },
+  {
+    "name": "env",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The environment (prod, staging, etc.)"
+  },
+  {
+    "name": "deploy_id",
+    "type": "STRING",
+    "mode": "NULLABLE",
+    "description": "The deployment or version identifier"
+  }
+]

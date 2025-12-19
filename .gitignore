@@ -1,6 +1,6 @@
 # .gitignore for .NET and Node.js projects
 architecture.md
-tasks.md
+tasks.md    
 # .NET
 bin/
 obj/
