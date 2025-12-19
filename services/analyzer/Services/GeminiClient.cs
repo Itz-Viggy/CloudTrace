@@ -24,7 +24,7 @@ public class GeminiClient
             
         _modelId = configuration["GEMINI_MODEL"]
             ?? Environment.GetEnvironmentVariable("GEMINI_MODEL")
-            ?? "gemini-1.5-flash";
+            ?? "gemini-2.5-flash";
 
         // Create client with region-specific endpoint
         var endpoint = $"{_location}-aiplatform.googleapis.com";

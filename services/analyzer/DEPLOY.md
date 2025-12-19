@@ -17,7 +17,7 @@ gcloud run deploy cloudtrace-analyzer \
   --source=. \
   --region=us-central1 \
   --service-account=cloudtrace-analyzer-sa@cloudtrace-481719.iam.gserviceaccount.com \
-  --set-env-vars="GCP_PROJECT_ID=cloudtrace-481719,BQ_DATASET=cloudtrace,VERTEX_AI_LOCATION=us-central1,GEMINI_MODEL=gemini-1.5-flash" \
+  --set-env-vars="GCP_PROJECT_ID=cloudtrace-481719,BQ_DATASET=cloudtrace,VERTEX_AI_LOCATION=us-central1,GEMINI_MODEL=gemini-2.5-flash" \
   --allow-unauthenticated \
   --project=cloudtrace-481719 \
   --memory=512Mi \
