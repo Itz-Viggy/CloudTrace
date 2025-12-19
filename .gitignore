@@ -1,2 +1,43 @@
+# .gitignore for .NET and Node.js projects
 architecture.md
 tasks.md
+# .NET
+bin/
+obj/
+out/
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+.vscode/
+*.swp
+*.bak
+*.tmp
+*.log
+.DS_Store
+
+# Node.js
+node_modules/
+dist/
+build/
+.next/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Infrastructure
+.terraform/
+*.tfstate
+*.tfstate.backup
+
+# Testing
+TestResults/
+
+# User-specific
+.gemini/
