@@ -152,7 +152,7 @@ export default function Dashboard() {
                       <div className="flex justify-between items-start mb-0.5">
                         <span className="text-xs font-mono text-zinc-500 truncate">{incident.id}</span>
                         <span className="text-[10px] font-medium text-zinc-600 uppercase">
-                          {formatDistanceToNow(new Date(typeof incident.start_ts === 'string' ? incident.start_ts : (incident.start_ts.seconds * 1000)), { addSuffix: true })}
+                          {formatDistanceToNow(new Date(typeof incident.start_ts === 'string' ? incident.start_ts : ((incident.start_ts as any).seconds * 1000)), { addSuffix: true })}
                         </span>
                       </div>
                       <h3 className="text-sm font-bold truncate text-zinc-200">{incident.service}</h3>
@@ -198,7 +198,7 @@ export default function Dashboard() {
                     <h2 className="text-3xl font-extrabold text-white mb-2">{selectedIncident.service}</h2>
                     <p className="text-zinc-400 flex items-center gap-2 text-sm">
                       <Clock className="h-4 w-4" />
-                      Detected at {new Date(typeof selectedIncident.start_ts === 'string' ? selectedIncident.start_ts : (selectedIncident.start_ts.seconds * 1000)).toLocaleString()}
+                      Detected at {new Date(typeof selectedIncident.start_ts === 'string' ? selectedIncident.start_ts : ((selectedIncident.start_ts as any).seconds * 1000)).toLocaleString()}
                     </p>
                   </div>
 
